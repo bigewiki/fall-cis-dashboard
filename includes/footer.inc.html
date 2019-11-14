@@ -1,0 +1,13 @@
+<footer>
+  <script>
+    document.getElementById(
+      "html-validator"
+    ).innerHTML = `<a href="http://validator.w3.org/nu/?doc=${window.location.href}" target="_blank"><i class="fab fa-html5"></i> HTML Validation</a>`;
+    document.getElementById(
+      "css-validator"
+    ).innerHTML = `<a href="https://jigsaw.w3.org/css-validator/validator?uri=${window.location.href}" target="_blank"><i class="fab fa-css3-alt"></i> CSS Validation</a>`;
+    document.getElementById(
+      "webaim"
+    ).innerHTML = `<a href="http://wave.webaim.org/report#/${window.location.href}" target="_blank"><i class="fas fa-universal-access"></i> WebAIM Validation</a>`;
+  </script>
+</footer>
