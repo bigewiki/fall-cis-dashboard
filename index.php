@@ -6,7 +6,7 @@
       <?php include('includes/sidebar.inc.html'); ?>
       <div id="main">
         <?php include('includes/nav.inc.html'); ?>
-        <?php include('includes/home.inc.html'); ?>
+        <?php require_once('router.php'); ?>
         <?php include('includes/footer.inc.html'); ?>
       </div>
     </div>
