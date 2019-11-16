@@ -22,14 +22,9 @@
             }
         }
 
-        public function route(){
-            // echo $this->getUri()[0];
-            
+        public function route(){            
             switch ($this->getUri()[0]) {
                 case "home":
-                    include('includes/home.inc.html');
-                    break;
-                case "forms":
                     include('includes/forms.inc.html');
                     break;
                 default:

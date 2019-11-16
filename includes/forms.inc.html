@@ -3,45 +3,32 @@
     <h2 class="color-dkblue">Create New User</h2>
     <form method="get" action="#">
       <div>
-        <label for="email">Email</label
-        ><input
-          name="email"
-          type="email"
-          id="email"
-          size="99"
-          maxlength="99"
-          required
-        />
+        <label for="username">Username</label
+        ><input name="username" type="text" id="username" required />
       </div>
       <div>
-        <label for="username">Username</label
-        ><input
-          size="12"
-          maxlength="12"
-          name="username"
-          type="text"
-          id="username"
-          required
-        />
+        <label for="age">Age</label
+        ><input name="age" type="text" id="age" required />
       </div>
       <div>
         <label for="password">Password</label
-        ><input
-          size="16"
-          maxlength="16"
-          name="password"
-          type="password"
-          id="password"
-          required
-        />
+        ><input name="password" type="password" id="password" required />
       </div>
       <div>
-        <label for="birthday">Birthday</label>
-        <input id="birthday" type="date" name="birthday" required />
+        <label for="year">Year</label>
+        <select name="year" id="year-menu"> </select>
+      </div>
+      <div>
+        <label for="month">Month</label>
+        <select name="month" id="month-menu"> </select>
+      </div>
+      <div>
+        <label for="day">Day</label>
+        <select name="day" id="day-menu"> </select>
       </div>
       <div>
         <label for="skills">Skills</label>
-        <select multiple name="skills" id="skills" size="6" required>
+        <select multiple name="skills" id="skills" required>
           <option value="nunchucks">Nunchucks</option>
           <option value="bow-hunting">Bow Hunting</option>
           <option value="computer-hacking">Computer Hacking</option>
