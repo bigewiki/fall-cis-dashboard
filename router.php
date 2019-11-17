@@ -5,7 +5,7 @@
     if( $_SERVER['HTTP_HOST'] == 'localhost'){
         $docRoot = '/edward/js-forms/';
     } else {
-        //$docRoot = '/edward/js-forms/';
+        $docRoot = '/superuser/javascript/form-validation/';
     }
 
     class Router{

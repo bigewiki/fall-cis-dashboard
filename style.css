@@ -263,9 +263,11 @@ fieldset div {
   color: #e5e5e5;
 }
 
-form label {
+form label,
+form fieldset legend {
   color: #00507d;
 }
+
 table.admin-table {
   width: 100%;
 }
@@ -295,4 +297,37 @@ table.admin-table tbody th {
 .error-text {
   font-weight: bold;
   text-align: center;
+}
+
+input,
+select {
+  padding: 5px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  padding: 15px;
+  border-width: 1px;
+  border-style: solid;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  opacity: 1;
+}
+
+input[type="submit"] {
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #5b8965;
+}
+
+input[type="reset"] {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #7f8181;
 }
