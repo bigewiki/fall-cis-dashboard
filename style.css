@@ -14,6 +14,10 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+.flex {
+  display: flex;
+}
+
 #main {
   width: 100%;
   height: 100%;
@@ -210,7 +214,6 @@ section {
 }
 
 form div {
-  display: flex;
   margin-top: 10px;
 }
 
@@ -275,4 +278,21 @@ table.admin-table tbody td,
 table.admin-table tbody th {
   border: 1px solid black;
   padding: 2px 5px 2px 5px;
+}
+
+.alert-wrapper {
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.error-alert-wrapper {
+  padding: 15px 15px 30px 15px;
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 2px solid #f5c6cb;
+}
+
+.error-text {
+  font-weight: bold;
+  text-align: center;
 }

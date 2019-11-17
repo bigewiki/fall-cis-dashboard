@@ -2,64 +2,49 @@
   <div class="card">
     <h2 class="color-dkblue">Create New User</h2>
     <form method="get" action="#">
-      <div>
-        <label for="username">Username</label
-        ><input name="username" type="text" id="username" required />
+      <div id="username-wrapper" class="alert-wrapper">
+        <div class="error-text" id="username-error"></div>
+        <div class="flex">
+          <label for="username">Username</label
+          ><input name="username" type="text" id="username" />
+        </div>
       </div>
-      <div>
-        <label for="age">Age</label
-        ><input name="age" type="text" id="age" required />
+      <div id="password-wrapper" class="alert-wrapper">
+        <div class="error-text" id="password-error"></div>
+        <div class="flex">
+          <label for="password">Password</label
+          ><input name="password" type="password" id="password" />
+        </div>
       </div>
-      <div>
-        <label for="password">Password</label
-        ><input name="password" type="password" id="password" required />
+      <div id="age-wrapper" class="alert-wrapper">
+        <div class="error-text" id="age-error"></div>
+        <div class="flex">
+          <label for="age">Age</label><input name="age" type="text" id="age" />
+        </div>
       </div>
-      <div>
-        <label for="year">Year</label>
-        <select name="year" id="year-menu"> </select>
+      <div id="year-wrapper" class="alert-wrapper">
+        <div class="error-text" id="year-error"></div>
+        <div class="flex">
+          <label for="year">Year</label>
+          <select name="year" id="year-menu"> </select>
+        </div>
       </div>
-      <div>
-        <label for="month">Month</label>
-        <select name="month" id="month-menu"> </select>
+      <div id="month-wrapper" class="alert-wrapper">
+        <div class="error-text" id="month-error"></div>
+        <div class="flex">
+          <label for="month">Month</label>
+          <select name="month" id="month-menu"> </select>
+        </div>
       </div>
-      <div>
-        <label for="day">Day</label>
-        <select name="day" id="day-menu"> </select>
+      <div id="day-wrapper" class="alert-wrapper">
+        <div class="error-text" id="day-error"></div>
+        <div class="flex">
+          <label for="day">Day</label>
+          <select name="day" id="day-menu"> </select>
+        </div>
       </div>
-      <div>
-        <label for="skills">Skills</label>
-        <select multiple name="skills" id="skills" required>
-          <option value="nunchucks">Nunchucks</option>
-          <option value="bow-hunting">Bow Hunting</option>
-          <option value="computer-hacking">Computer Hacking</option>
-          <option value="yodeling">Yodeling</option>
-          <option value="fast-rapping">Fast Rapping</option>
-          <option value="talking-backwards">Talking Backwards</option>
-        </select>
-      </div>
-      <div>
-        <label for="role">Role</label>
-        <select id="role" name="role" required>
-          <option style="display:none" value="">Select a Role</option>
-          <optgroup label="Comment Only">
-            <option value="subscriber">Subscriber</option>
-            <option value="moderator">Moderator</option>
-          </optgroup>
-          <optgroup label="Can edit select drafts">
-            <option value="contributor">Contributor</option>
-          </optgroup>
-          <optgroup label="Can create and publish">
-            <option value="author">Author</option>
-          </optgroup>
-          <optgroup label="Can edit any post">
-            <option value="editor">Editor</option>
-          </optgroup>
-          <optgroup label="Superuser privilages">
-            <option value="admin">Admin</option>
-          </optgroup>
-        </select>
-      </div>
-      <div>
+
+      <div class="flex">
         <label for="bio">Biography</label>
         <textarea
           maxlength="255"
@@ -70,25 +55,19 @@
       </div>
       <fieldset>
         <legend>Options</legend>
-        <div>
-          <input
-            type="checkbox"
-            name="email-notify"
-            id="email-notify"
-            checked="checked"
-          /><label for="email-notify"
+        <div class="flex">
+          <input type="checkbox" name="email-notify" id="email-notify" /><label
+            for="email-notify"
             >User will receive email notifications</label
           >
         </div>
-        <div>
-          <input
-            type="checkbox"
-            name="free-work"
-            id="free-work"
-            checked="checked"
-          /><label for="free-work">User can work for free</label>
+        <div class="flex">
+          <input type="checkbox" name="free-work" id="free-work" /><label
+            for="free-work"
+            >User can work for free</label
+          >
         </div>
-        <div>
+        <div class="flex">
           <input type="checkbox" name="donator" id="donator" /><label
             for="donator"
             >User can donate for operation costs</label
@@ -96,16 +75,49 @@
         </div>
       </fieldset>
       <fieldset>
+        <legend>Role</legend>
+        <div class="flex">
+          <input type="radio" id="subscriber" name="roles" value="subscriber" />
+          <label for="subscriber">Subscriber</label>
+        </div>
+        <div class="flex">
+          <input type="radio" id="moderator" name="roles" value="moderator" />
+          <label for="moderator">Moderator</label>
+        </div>
+        <div class="flex">
+          <input
+            type="radio"
+            id="contributor"
+            name="roles"
+            value="contributor"
+          />
+          <label for="contributor">Contributor</label>
+        </div>
+        <div class="flex">
+          <input type="radio" id="author" name="roles" value="author" />
+          <label for="author">Author</label>
+        </div>
+        <div class="flex">
+          <input type="radio" id="editor" name="roles" value="editor" />
+          <label for="editor">Editor</label>
+        </div>
+        <div class="flex">
+          <input type="radio" id="admin" name="roles" value="admin" />
+          <label for="admin">Admin</label>
+        </div>
+      </fieldset>
+
+      <fieldset>
         <legend>Timezone</legend>
-        <div>
+        <div class="flex">
           <input type="radio" id="eastern" name="timezone" value="eastern" />
           <label for="eastern">US Eastern UTC -4</label>
         </div>
-        <div>
+        <div class="flex">
           <input type="radio" id="central" name="timezone" value="central" />
           <label for="central">US Central UTC -5</label>
         </div>
-        <div>
+        <div class="flex">
           <input
             type="radio"
             id="mountain-daylight"
@@ -114,31 +126,30 @@
           />
           <label for="mountain-daylight">US Mountain Daylight UTC -6</label>
         </div>
-        <div>
+        <div class="flex">
           <input
             type="radio"
             id="mountain-standard"
             name="timezone"
             value="mountain-standard"
-            checked="checked"
           />
           <label for="mountain-standard">Moutain Standard (Arizona)</label>
         </div>
-        <div>
+        <div class="flex">
           <input type="radio" id="pacific" name="timezone" value="pacific" />
           <label for="pacific">US Pacific UTC -7</label>
         </div>
-        <div>
+        <div class="flex">
           <input type="radio" id="alaska" name="timezone" value="alaska" />
           <label for="alaska">Alaska UTC -8</label>
         </div>
-        <div>
+        <div class="flex">
           <input type="radio" id="hawaii" name="timezone" value="hawaii" />
           <label for="hawaii">Hawaii UTC -10</label>
         </div>
       </fieldset>
       <input type="hidden" name="user-form" value="create" />
-      <div>
+      <div class="flex">
         <input type="reset" value="reset" />
         <input name="submit" value="submit" type="submit" />
       </div>
